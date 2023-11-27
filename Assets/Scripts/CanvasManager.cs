@@ -15,22 +15,27 @@ public class CanvasManager : MonoBehaviour
         
     }
 
+    // ABSTRACTION
+    string FormatText(LivingBeing livingBeing) {
+        return livingBeing.name + " " + livingBeing.Moves();
+    }
+
     public void OnClickLivingBeing() {
         text.text = "Im abstract";
     }
 
     public void OnClickPerson() {
-        text.text = person.Moves();
+        text.text = FormatText(person);
 
     }
 
     public void OnClickDog() {
-        text.text = dog.Moves();
+        text.text = FormatText(dog);
 
     }
 
     public void OnClickBird() {
-        text.text = bird.Moves();
+        text.text = FormatText(bird);
 
     }
 }
